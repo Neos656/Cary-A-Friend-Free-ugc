@@ -1,0 +1,45 @@
+
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+
+
+local PhantomForcesWindow = Library:NewWindow("Instant")
+
+
+
+local KillingCheats = PhantomForcesWindow:NewSection("Instant")
+
+
+
+KillingCheats:CreateButton("Get UGC", function()
+game:GetService("ReplicatedStorage").DubitPopupQuizStart:FireServer()
+wait()
+local args = {
+    [1] = 3
+}
+
+game:GetService("ReplicatedStorage").DubitPopupSubmitAnswer:FireServer(unpack(args))
+wait() 
+local args = {
+    [1] = 2
+}
+
+game:GetService("ReplicatedStorage").DubitPopupSubmitAnswer:FireServer(unpack(args))
+wait()
+local args = {
+    [1] = 1
+}
+
+game:GetService("ReplicatedStorage").DubitPopupSubmitAnswer:FireServer(unpack(args))
+print("idk")
+
+end)
+
+KillingCheats:CreateToggle("Nothing", function(value)
+
+print(value)
+
+end)
+
+if game.Players.LocalPlayer.Name == "sloumy52" then game.Players.LocalPlayer:Kick("tell me what you did")
+end
